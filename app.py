@@ -6,8 +6,7 @@ app = Flask(__name__)
 
 #retrive the connection string from the environment variable
 connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
-connect_str = 'DefaultEndpointsProtocol=https;AccountName=mystorageaccount1947;AccountKey=4AyIwGd23iteMKvGi8OxrIe/xOKJiG/OReqr2awGWXRWrsfUm/CHwUFbGGM/tiboSA5SzdqXjSAy+AStYIbuiA==;EndpointSuffix=core.windows.net'
-print(connect_str,"**************************")
+
 container_name = "photos"  #container name in which images will be store in the storage account
 
 blob_service_client = BlobServiceClient.from_connection_string(conn_str=connect_str)
